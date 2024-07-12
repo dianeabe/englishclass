@@ -2,186 +2,12 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>ダイアン英会話教室 - 楽しく学ぶ英会話</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #4A90E2;
-            --secondary-color: #F5A623;
-            --accent-color: #50E3C2;
-            --text-color: #333333;
-            --background-color: #F8F8F8;
-        }
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: var(--text-color);
-            background-color: var(--background-color);
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            opacity: 0.8;
-        }
-        section {
-            padding: 60px 0;
-        }
-        h1, h2 {
-            color: var(--primary-color);
-            text-align: center;
-        }
-        .hero {
-            background-color: var(--accent-color);
-            color: white;
-            text-align: center;
-            padding: 80px 0;
-        }
-        .hero h1 {
-            font-size: 2.5em;
-            color: white;
-            margin-bottom: 20px;
-        }
-        .slider-container {
-            max-width: 100%;
-            position: relative;
-            margin: auto;
-            height: 400px;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .slider-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            display: none;
-        }
-        .slider-button {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: rgba(0,0,0,0.8);
-        }
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .cta-button:hover {
-            background-color: #E09600;
-        }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .feature-item {
-            text-align: center;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
-        .feature-icon {
-            font-size: 2em;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        .teacher-card {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .teacher-card:hover {
-            transform: translateY(-5px);
-        }
-        .testimonial {
-            font-style: italic;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 40px;
-        }
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav ul li {
-                margin: 10px 0;
-            }
-            .hero h1 {
-                font-size: 2em;
-            }
-        }
+    :root{--primary-color:#4A90E2;--secondary-color:#F5A623;--accent-color:#50E3C2;--text-color:#333;--background-color:#F8F8F8}body{font-family:'Noto Sans JP',sans-serif;line-height:1.6;margin:0;padding:0;color:var(--text-color);background-color:var(--background-color)}.container{max-width:1200px;margin:0 auto;padding:0 20px}header{background-color:var(--primary-color);color:#fff;padding:1rem 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 4px rgba(0,0,0,.1)}nav ul{list-style-type:none;padding:0;margin:0;display:flex;justify-content:center}nav ul li{margin:0 15px}nav ul li a{color:#fff;text-decoration:none;transition:opacity .3s;font-weight:700}nav ul li a:hover{opacity:.8}section{padding:60px 0}h1,h2{color:var(--primary-color);text-align:center}.hero{background-color:var(--accent-color);color:#fff;text-align:center;padding:80px 0}.hero h1{font-size:2.5em;color:#fff;margin-bottom:20px}.slider-container{max-width:100%;position:relative;margin:auto;height:400px;overflow:hidden;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,.1)}.slider-image{width:100%;height:400px;object-fit:cover;display:none}.slider-button{cursor:pointer;position:absolute;top:50%;width:auto;padding:16px;margin-top:-22px;color:#fff;font-weight:700;font-size:18px;transition:.6s ease;border-radius:0 3px 3px 0;user-select:none;background-color:rgba(0,0,0,.8)}.next{right:0;border-radius:3px 0 0 3px}.cta-button{display:inline-block;background-color:var(--secondary-color);color:#fff;padding:12px 24px;text-decoration:none;border-radius:30px;font-weight:700;transition:background-color .3s;text-transform:uppercase;letter-spacing:1px}.cta-button:hover{background-color:#E09600}.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:40px}.feature-item{text-align:center;padding:20px;background-color:#fff;border-radius:10px;box-shadow:0 2px 4px rgba(0,0,0,.1);transition:transform .3s}.feature-item:hover{transform:translateY(-5px)}.feature-icon{font-size:2em;color:var(--primary-color);margin-bottom:15px}.teacher-card{background:#fff;border-radius:10px;padding:30px;margin-bottom:30px;box-shadow:0 2px 4px rgba(0,0,0,.1);transition:transform .3s}.teacher-card:hover{transform:translateY(-5px)}.testimonial{font-style:italic;background:#fff;padding:25px;border-radius:10px;margin-bottom:30px;box-shadow:0 2px 4px rgba(0,0,0,.1)}footer{background-color:var(--primary-color);color:#fff;text-align:center;padding:30px 0;margin-top:40px}.hamburger{display:none;cursor:pointer;position:fixed;top:15px;right:15px;z-index:1001;background:var(--primary-color);padding:10px;border-radius:5px}.hamburger span{display:block;width:25px;height:3px;margin:5px auto;background-color:#fff;transition:all .3s ease-in-out}@media (max-width:768px){.hamburger{display:block}nav ul{position:fixed;right:-100%;top:0;flex-direction:column;background-color:var(--primary-color);width:80%;height:100vh;z-index:1000;text-align:center;transition:.3s;box-shadow:0 10px 27px rgba(0,0,0,.05)}nav ul.active{right:0}nav ul li{margin:25px 0}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(1){transform:translateY(8px) rotate(45deg)}.hamburger.active span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}}
     </style>
 </head>
 <body>
@@ -198,8 +24,8 @@
                 </ul>
             </div>
         </nav>
+        <div class="hamburger"><span></span><span></span><span></span></div>
     </header>
-
     <main>
         <section class="hero">
             <div class="container">
@@ -208,14 +34,12 @@
                 <a href="#contact" class="cta-button">無料体験レッスン予約</a>
             </div>
         </section>
-
         <section id="about">
             <div class="container">
                 <h2>教室概要</h2>
                 <p>ダイアン英会話教室では、経験豊富な講師が丁寧に指導いたします。初心者から上級者まで、あなたのレベルに合わせたレッスンをご用意しています。心地よい環境で英語を学び、国際的な視野を広げましょう。</p>
             </div>
         </section>
-
         <section id="features">
             <div class="container">
                 <h2>特徴</h2>
@@ -243,7 +67,6 @@
                 </div>
             </div>
         </section>
-
         <section id="gallery">
             <div class="container">
                 <h2>ギャラリー</h2>
@@ -256,7 +79,6 @@
                 </div>
             </div>
         </section>
-
         <section id="teachers">
             <div class="container">
                 <h2>講師紹介</h2>
@@ -266,7 +88,6 @@
                 </div>
             </div>
         </section>
-
         <section id="testimonials">
             <div class="container">
                 <h2>生徒の声</h2>
@@ -280,7 +101,6 @@
                 </div>
             </div>
         </section>
-
         <section id="contact">
             <div class="container">
                 <h2>お問い合わせ</h2>
@@ -289,42 +109,13 @@
             </div>
         </section>
     </main>
-
     <footer>
         <div class="container">
-            <p>&copy; 2024 Smile English School. All rights reserved.</p>
+            <p>&copy; 2024 Diane English School. All rights reserved.</p>
         </div>
     </footer>
-
     <script>
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let slides = document.getElementsByClassName("slider-image");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            slides[slideIndex-1].style.display = "block";
-            setTimeout(showSlides, 5000); // 5秒ごとに画像を切り替え
-        }
-
-        function changeSlide(n) {
-            slideIndex += n - 1;
-            showSlides();
-        }
-
-        // スムーズスクロール
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+    let slideIndex=0;showSlides();function showSlides(){let e=document.getElementsByClassName("slider-image");for(let l=0;l<e.length;l++)e[l].style.display="none";slideIndex++,slideIndex>e.length&&(slideIndex=1),e[slideIndex-1].style.display="block",setTimeout(showSlides,5e3)}function changeSlide(e){slideIndex+=e-1,showSlides()}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault(),document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"})})});const hamburger=document.querySelector(".hamburger"),navMenu=document.querySelector("nav ul");function mobileMenu(){hamburger.classList.toggle("active"),navMenu.classList.toggle("active")}function closeMenu(){hamburger.classList.remove("active"),navMenu.classList.remove("active")}hamburger.addEventListener("click",mobileMenu),document.querySelectorAll("nav ul li a").forEach(e=>e.addEventListener("click",closeMenu));
     </script>
 </body>
 </html>
