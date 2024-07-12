@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ダイアン英会話教室 - 楽しく学ぶ英会話</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #F5A623;
+            --accent-color: #50E3C2;
+            --text-color: #333333;
+            --background-color: #F8F8F8;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+        section {
+            padding: 60px 0;
+        }
+        h1, h2 {
+            color: var(--primary-color);
+            text-align: center;
+        }
+        .hero {
+            background-color: var(--accent-color);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .slider-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .slider-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: none;
+        }
+        .slider-button {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .cta-button:hover {
+            background-color: #E09600;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            font-size: 2em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .teacher-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .teacher-card:hover {
+            transform: translateY(-5px);
+        }
+        .testimonial {
+            font-style: italic;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> 教室概要</a></li>
+                    <li><a href="#features"><i class="fas fa-star"></i> 特徴</a></li>
+                    <li><a href="#gallery"><i class="fas fa-images"></i> ギャラリー</a></li>
+                    <li><a href="#teachers"><i class="fas fa-chalkboard-teacher"></i> 講師紹介</a></li>
+                    <li><a href="#testimonials"><i class="fas fa-comment-dots"></i> 生徒の声</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> お問い合わせ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Smile English School</h1>
+                <p>楽しく学んで、世界とつながろう！</p>
+                <a href="#contact" class="cta-button">無料体験レッスン予約</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>教室概要</h2>
+                <p>ダイアン英会話教室では、経験豊富な講師が丁寧に指導いたします。初心者から上級者まで、あなたのレベルに合わせたレッスンをご用意しています。心地よい環境で英語を学び、国際的な視野を広げましょう。</p>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <h2>特徴</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-users feature-icon"></i>
+                        <h3>少人数制クラス</h3>
+                        <p>一人ひとりに目が行き届く、アットホームな雰囲気です。</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-globe-americas feature-icon"></i>
+                        <h3>ネイティブ講師</h3>
+                        <p>自然な英語を学べる環境を提供します。</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-clock feature-icon"></i>
+                        <h3>柔軟なスケジュール</h3>
+                        <p>あなたのライフスタイルに合わせて学べます。</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-coins feature-icon"></i>
+                        <h3>リーズナブルな料金</h3>
+                        <p>質の高いレッスンを手頃な価格で提供します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="container">
+                <h2>ギャラリー</h2>
+                <div class="slider-container">
+                    <img class="slider-image" src="image1.jpg" alt="英会話教室の様子1">
+                    <img class="slider-image" src="image2.jpg" alt="英会話教室の様子2">
+                    <img class="slider-image" src="image3.jpg" alt="英会話教室の様子3">
+                    <a class="slider-button prev" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="slider-button next" onclick="changeSlide(1)">&#10095;</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="teachers">
+            <div class="container">
+                <h2>講師紹介</h2>
+                <div class="teacher-card">
+                    <h3><i class="fas fa-user-tie"></i> 阿部ダイアン（Diane Abe）</h3>
+                    <p>ニュージーランド🇳🇿出身。10年以上の英語教育経験を持つ。フレンドリーで分かりやすい指導が特徴です。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <h2>生徒の声</h2>
+                <div class="testimonial">
+                    <p><i class="fas fa-quote-left"></i> アットホームな雰囲気で、楽しく英語を学べています。先生方も親切で、質問しやすい環境です。 <i class="fas fa-quote-right"></i></p>
+                    <p>- 田中さん（会社員）</p>
+                </div>
+                <div class="testimonial">
+                    <p><i class="fas fa-quote-left"></i> 3ヶ月間通って、海外旅行で英語を使う自信がつきました。実践的な会話練習が役立ちました。 <i class="fas fa-quote-right"></i></p>
+                    <p>- 鈴木さん（学生）</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>お問い合わせ</h2>
+                <p>体験レッスンや詳細について、お気軽にお問い合わせください。</p>
+                <a href="mailto:info@example.com" class="cta-button">メールでのお問い合わせ</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Smile English School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slider-image");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000); // 5秒ごとに画像を切り替え
+        }
+
+        function changeSlide(n) {
+            slideIndex += n - 1;
+            showSlides();
+        }
+
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
